@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import logo from "./assets/img/logo.png"
+import FlashCards from './FlashCards'
+import Footer from './Footer'
 
 export default function ContainerZap(){
     return(
@@ -8,6 +10,8 @@ export default function ContainerZap(){
                 <img src={logo} alt="logo"/>
                 <h1>ZapRecall</h1>
             </LogoContainer>
+            <FlashCards/>
+            <Footer/>
         </ScreenContainer>
     )
 }
