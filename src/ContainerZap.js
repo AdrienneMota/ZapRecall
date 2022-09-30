@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import logo from "./assets/img/logo.png"
 import FlashCards from './FlashCards'
 import Footer from './Footer'
+import Perguntas from "./Perguntas"
 
 export default function ContainerZap(){
     return(
@@ -10,7 +11,9 @@ export default function ContainerZap(){
                 <img src={logo} alt="logo"/>
                 <h1>ZapRecall</h1>
             </LogoContainer>
-            <FlashCards/>
+            <FlashCards
+                perguntas = {Perguntas} // passando o array para a classe flashcards
+            />
             <Footer/>
         </ScreenContainer>
     )

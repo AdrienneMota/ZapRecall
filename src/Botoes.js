@@ -29,7 +29,6 @@ const ContainerBotoes = styled.div`
         text-align: center;
         color: #FFFFFF;
         border-radius: 5px;
-        border: 1px solid #333333;
         padding:5px;
     }
 
