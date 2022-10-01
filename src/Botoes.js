@@ -12,9 +12,10 @@ export default function Botoes(){
 
 const ContainerBotoes = styled.div`
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
-    margin: 20px;
+    margin: 0 auto 1px auto;
+    
 
     .vermelho, .amarelo, .verde{
         width: 90px;

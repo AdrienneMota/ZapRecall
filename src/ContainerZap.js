@@ -1,10 +1,19 @@
 import styled from 'styled-components'
+//import { useState } from 'react'
 import logo from "./assets/img/logo.png"
 import FlashCards from './FlashCards'
 import Footer from './Footer'
 import Perguntas from "./Perguntas"
 
 export default function ContainerZap(){
+    //const [questao, setQuestao] = useState(false)
+
+    //function abrePergunta(id){
+       // const newValue = true
+       // setQuestao(newValue)
+       //console.log(id)
+    //}
+
     return(
         <ScreenContainer>
             <LogoContainer>
@@ -13,6 +22,8 @@ export default function ContainerZap(){
             </LogoContainer>
             <FlashCards
                 perguntas = {Perguntas} // passando o array para a classe flashcards
+                //setQuestao = {setQuestao} 
+                //abrePergunta={abrePergunta}
             />
             <Footer/>
         </ScreenContainer>

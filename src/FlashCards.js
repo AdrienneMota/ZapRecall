@@ -3,13 +3,13 @@ import Card from './Card'
 
 export default function FlashCards(props) {
 
-    const { perguntas } = props // props agora pode representar todos as propriedades dos objetos
+    const {perguntas} = props // props agora pode representar todos as propriedades dos objetos
 
     return (
-        <>
+        <div className='containerperguntas'>
             {perguntas.map(
-                (p, i) => <Card key={i} id={p.id} />
+                (p, i) => <Card key={i} questao={p}/>
             )}
-        </>
+        </div>
     )
 }

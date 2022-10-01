@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Botoes from "./Botoes"
 import Progresso from "./Progresso"
 //import Progresso from "./Progresso"
 
@@ -7,7 +6,6 @@ export default function Footer(){
     return(
         <>
             <ContainerFooter>
-                <Botoes/>
                 <Progresso/>
             </ContainerFooter>
         </>
