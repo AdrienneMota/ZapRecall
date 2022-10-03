@@ -1,10 +1,10 @@
 import styled from "styled-components";
-
+import Perguntas from "./Perguntas.js"
 export default function Progresso({progresso}){
-    
+       
     return(
         <ContainerProgresso>
-            <p>{progresso}/4 CONCLUÍDOS</p>
+            <p>{progresso}/{Perguntas.length} CONCLUÍDOS</p>
         </ContainerProgresso>
     )
 }
