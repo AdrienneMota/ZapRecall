@@ -1,11 +1,48 @@
 import styled from "styled-components";
+import certo from './assets/img/icone_certo.png'
+import erro from './assets/img/icone_erro.png'
+import quase from './assets/img/icone_quase.png'
 
-export default function Botoes({aparece}){
+export default function Botoes({aparece, setcardPergunta, setIcone, setRespondido, setCor, setProgresso, progresso}){
     return(
     <ContainerBotoes aparece={aparece}>    
-        <button className="vermelho">Não Lembrei</button>
-        <button className="amarelo">Quase não lembrei</button>
-        <button className="verde">Zap!</button>
+        <button 
+            className="vermelho" 
+            onClick={() => {
+                setcardPergunta(false); 
+                setIcone(erro);
+                setRespondido(true);
+                setCor('vermelho');
+                setProgresso(progresso + 1)
+            }
+            }
+        >
+            Não Lembrei
+        </button>
+        
+        <button className="amarelo" 
+            onClick={() => {
+                setcardPergunta(false);
+                setIcone(quase);
+                setRespondido(true);
+                setCor('amarelo');
+                setProgresso(progresso + 1)
+            }}
+        >
+            Quase não lembrei
+        </button>
+        
+        <button className="verde"
+            onClick={() => {
+                setcardPergunta(false); 
+                setIcone(certo);
+                setRespondido(true);
+                setCor('verde');
+                setProgresso(progresso + 1)
+                }}
+        >
+            Zap!
+        </button>
     </ContainerBotoes>
     )
 }

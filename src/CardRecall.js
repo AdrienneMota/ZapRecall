@@ -1,19 +1,24 @@
 import styled from "styled-components";
 import { useState } from "react";
-import setavirar from './assets/img/seta_virar.png'
-import Botoes from "./Botoes"
+import setavirar from './assets/img/seta_virar.png';
+import Botoes from "./Botoes";
 
-export default function CardRecall({questao}){
-    const { pergunta, resposta} = questao
+export default function CardRecall({questao, setcardPergunta, setIcone, setRespondido, setCor, setProgresso, progresso}){
+    const {pergunta, resposta} = questao
     const [cardResposta, setcardResposta] = useState(false)
 
         return(
             <PerguntaAberta>
                 <p>{cardResposta? resposta : pergunta}</p>
-                <div onClick={() => setcardResposta(true)}>
+                <div onClick={() => {setcardResposta(true)}}>
                     <RevelaResposta isOff={cardResposta} src={setavirar} alt="botao viras card"/>
                 </div>
-                <Botoes aparece={cardResposta}/>
+                <Botoes aparece={cardResposta} setcardPergunta={setcardPergunta}
+                setIcone={setIcone}
+                setRespondido={setRespondido}
+                setCor={setCor}
+                setProgresso={setProgresso}
+                progresso={progresso}/>
             </PerguntaAberta>
         )
   

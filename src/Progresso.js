@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export default function Progresso(){
+export default function Progresso({progresso}){
+    
     return(
         <ContainerProgresso>
-            <p>0/4 CONCLUÍDOS</p>
+            <p>{progresso}/4 CONCLUÍDOS</p>
         </ContainerProgresso>
     )
 }

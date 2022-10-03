@@ -1,12 +1,14 @@
 import styled from "styled-components"
 import Progresso from "./Progresso"
-//import Progresso from "./Progresso"
+// import { useState } from "react"
 
-export default function Footer(){
+export default function Footer({progresso}){
+    
+
     return(
         <>
             <ContainerFooter>
-                <Progresso/>
+                <Progresso progresso={progresso} />
             </ContainerFooter>
         </>
     )

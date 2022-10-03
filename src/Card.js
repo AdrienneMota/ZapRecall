@@ -3,20 +3,23 @@ import { useState } from "react";
 import styled from 'styled-components';
 import setaplay from './assets/img/seta_play.png';
 
-export default function Card({questao}) {
+export default function Card({questao, setProgresso, progresso}) {
 
     const [cardPergunta, setcardPergunta] = useState(false)
+    const [icone, setIcone] = useState(setaplay)
+    const [respondido, setRespondido] = useState(false)
+    const [cor, setCor] = useState('cinza')
 
     if (cardPergunta) {
         return (
-            <CardRecall questao={questao}/>
+            <CardRecall questao={questao} setcardPergunta={setcardPergunta} setIcone={setIcone} setRespondido={setRespondido} setCor={setCor} setProgresso={setProgresso} progresso={progresso} />
         )
     }
     else {
         return (
-            <PerguntaFechada>
-                <p>Pergunta {questao.id}</p>
-                <img src={setaplay} onClick={() => setcardPergunta(true)} alt="botao resolver card" />
+            <PerguntaFechada respondido={respondido} cor={cor}>
+                <p >Pergunta {questao.id}</p>
+                <img src={icone} onClick={() => setcardPergunta(true)} alt="botao resolver card" />
             </PerguntaFechada>
         )
     }
@@ -39,6 +42,8 @@ const PerguntaFechada = styled.div`
         font-weight: 700;
         font-size: 16px;
         line-height: 19px;
-        color: #333333;
+        text-decoration: ${(prop) => prop.respondido? "line-through" : "none"};
+        color: ${(prop) => (prop.cor === 'verde')? "#2FBE34" : (prop.cor === "vermelho")? "#FF3030": (prop.cor === "amarelo")? "#FF922E" : "#333333"};
     }
 `
+

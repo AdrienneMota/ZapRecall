@@ -127,3 +127,8 @@
   bottom: 10px;
   right: 10px;
 }
+
+.risco-vermelho{
+  text-decoration: line-through;
+  color: #FF3030;
+}
