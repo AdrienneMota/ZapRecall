@@ -26,7 +26,7 @@ const Perguntas = [
     },
     {
         id: 6,
-        ergunta: "Usamos o npm para...?",
+        pergunta: "Usamos o npm para...?",
         resposta: "gerenciar os pacotes necessários e suas dependências"
     },
     {

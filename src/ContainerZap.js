@@ -4,12 +4,15 @@ import logo from "./assets/img/logo.png"
 import FlashCards from './FlashCards'
 import Footer from './Footer'
 import Perguntas from "./Perguntas"
+import { GlobalStyle } from "./GlobalStyle"
 
 export default function ContainerZap(){
 
     const [progresso, setProgresso] = useState(0)
     
     return(
+        <>
+        <GlobalStyle/>
         <ScreenContainer>
             <LogoContainer>
                 <img src={logo} alt="logo"/>
@@ -24,6 +27,7 @@ export default function ContainerZap(){
                 progresso = {progresso} 
             />
         </ScreenContainer>
+        </>
     )
 }
 

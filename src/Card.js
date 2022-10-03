@@ -45,5 +45,8 @@ const PerguntaFechada = styled.div`
         text-decoration: ${(prop) => prop.respondido? "line-through" : "none"};
         color: ${(prop) => (prop.cor === 'verde')? "#2FBE34" : (prop.cor === "vermelho")? "#FF3030": (prop.cor === "amarelo")? "#FF922E" : "#333333"};
     }
+    img{
+        pointer-events: ${(prop) => prop.respondido? "none" : ""}
+    }
 `
 
