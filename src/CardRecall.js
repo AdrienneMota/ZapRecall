@@ -43,9 +43,9 @@ const PerguntaAberta = styled.div`
     flex-direction: column;
     justify-content: space-between;
     p{
-        font-family: 'Recursive';
+        font-family: 'Righteous', 'Recursive';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 300;
         font-size: 16px;
         line-height: 19px;
         color: #333333;

@@ -65,6 +65,7 @@ const ContainerBotoes = styled.div`
         color: #FFFFFF;
         border-radius: 5px;
         padding:5px;
+        font-family: 'Righteous', 'Recursive';
     }
 
     .vermelho{

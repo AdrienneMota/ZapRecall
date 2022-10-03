@@ -37,7 +37,7 @@ const PerguntaFechada = styled.div`
     align-items: center;
     justify-content: space-between;
     p{
-        font-family: 'Recursive';
+        font-family: 'Righteous', 'Recursive';
         font-style: normal;
         font-weight: 700;
         font-size: 16px;
