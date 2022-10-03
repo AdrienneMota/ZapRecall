@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export default function Botoes(){
+export default function Botoes({aparece}){
     return(
-    <ContainerBotoes>    
+    <ContainerBotoes aparece={aparece}>    
         <button className="vermelho">Não Lembrei</button>
         <button className="amarelo">Quase não lembrei</button>
         <button className="verde">Zap!</button>
@@ -11,11 +11,10 @@ export default function Botoes(){
 }
 
 const ContainerBotoes = styled.div`
-    display: flex;
+    display: ${(prop)=> prop.aparece? "flex" : "none"};
     width: 100%;
     justify-content: space-between;
     margin: 0 auto 1px auto;
-    
 
     .vermelho, .amarelo, .verde{
         width: 90px;

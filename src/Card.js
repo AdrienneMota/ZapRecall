@@ -1,14 +1,44 @@
-import { useState } from 'react'
-import Cardnatela from './Cardnatela'
+import CardRecall from './CardRecall';
+import { useState } from "react";
+import styled from 'styled-components';
+import setaplay from './assets/img/seta_play.png';
 
-export default function Card(props) {
+export default function Card({questao}) {
 
     const [cardPergunta, setcardPergunta] = useState(false)
 
-    return (
-            <div className='Card' onClick={() => setcardPergunta(true)}>
-                <Cardnatela cardPergunta={cardPergunta} questao={props.questao}/>               
-            </div>
-    )
+    if (cardPergunta) {
+        return (
+            <CardRecall questao={questao}/>
+        )
+    }
+    else {
+        return (
+            <PerguntaFechada>
+                <p>Pergunta {questao.id}</p>
+                <img src={setaplay} onClick={() => setcardPergunta(true)} alt="botao resolver card" />
+            </PerguntaFechada>
+        )
+    }
 }
 
+const PerguntaFechada = styled.div`
+    width: 300px;
+    height: 35px;
+    background-color: #FFFFFF;
+    margin: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        font-family: 'Recursive';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+    }
+`
